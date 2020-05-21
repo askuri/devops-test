@@ -1,3 +1,3 @@
 #!/bin/bash
-cmake CMakeLists.txt
-make memtest
+emcmake cmake CMakeLists.txt
+emmake make memtest
