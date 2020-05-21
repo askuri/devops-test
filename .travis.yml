@@ -15,8 +15,8 @@ before_install:
   - docker run -dit --name emscripten -v $(pwd):/src trzeci/emscripten:sdk-incoming-64bit bash
 
 script:
-  - docker exec -it emscripten emcmake cmake CMakeLists.txt
-  - emmake make memtest
+  - docker exec -it emscripten cmake CMakeLists.txt
+  - make memtest
 
 deploy:
   provider: pages
