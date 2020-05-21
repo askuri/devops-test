@@ -15,7 +15,7 @@ before_install:
   - docker run -dit --name emscripten -v $(pwd):/src trzeci/emscripten:sdk-incoming-64bit bash
 
 script:
-  - docker exec -it emscripten ls -R
+  - docker exec -it emscripten ./build.sh
 
 deploy:
   provider: pages
